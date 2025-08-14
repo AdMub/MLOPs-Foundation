@@ -4,6 +4,6 @@ dnspython
 pandas
 numpy
 ensure
-pytest.
+pytest
 
 -e .
