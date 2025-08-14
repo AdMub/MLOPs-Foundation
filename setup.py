@@ -30,7 +30,7 @@ PKG_NAME = "mongodb_connect"
 AUTHOR_USER_NAME = "AdMub"
 
 # Your email (preferably the one linked to GitHub)
-AUTHOR_EMAIL = "your_email@example.com"
+AUTHOR_EMAIL = "admub465@gmail.com"
 
 setup(
     name=PKG_NAME,
