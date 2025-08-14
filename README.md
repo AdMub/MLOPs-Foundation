@@ -1,49 +1,86 @@
-# requirements_dev.txt we use for the testing
-It makes it easier to install and manage dependencies for development and testing, separate from the dependencies required for production.
+# Development and Testing Dependencies
 
-# difference between requirements_dev.txt and requirements.txt
+## requirements_dev.txt
+- This file lists dependencies needed for development and testing only.
+- It keeps development/testing dependencies separate from production requirements.
+- Example: Testing frameworks, linters, mock libraries.
 
-requirements.txt is used to specify the dependencies required to run the production code of a Python project, while requirements_dev.txt is used to specify the dependencies required for development and testing purposes.
+## requirements.txt
+- This file lists the dependencies required to run the project in production.
+- Contains only the packages necessary for deployment.
+
+---
+
+# Difference Between requirements_dev.txt and requirements.txt
+- **requirements.txt** → For production environment dependencies.
+- **requirements_dev.txt** → For development & testing environment dependencies.
+
+---
 
 # tox.ini
-We use if for the testing in the python package testing against different version of the python 
+- Used for testing the Python package against different Python versions.
+- Tox automates:
+  1. Creating virtual environments for different Python versions.
+  2. Installing required dependencies.
+  3. Running predefined test commands.
+- Think of it as a combination of **virtualenvwrapper** and **makefile**.
+- Creates a `.tox` folder where environments are stored.
 
-## how tox works tox enviornment creation
-1. Install depedencies and packages 
-2. Run commands
-3. Its a combination of the (virtualenvwrapper and makefile)
-4. It creates a .tox
-
+---
 
 # pyproject.toml
-it is being used for configuration the python project it is a alternative of the setup.cfg file. its containts configuration related to the build system
-such as the build tool used package name version author license and dependencies
+- Used for configuring Python projects (alternative to setup.cfg).
+- Contains metadata:
+  - Build system info
+  - Package name, version, author, license
+  - Dependencies
+- Works with modern packaging tools (e.g., Poetry, Flit, setuptools).
+
+---
 
 # setup.cfg
-In summary, setup.cfg is used by setuptools to configure the packaging and installation of a Python projec
+- Used by **setuptools** for project packaging and installation.
+- Stores configuration options such as:
+  - Metadata (name, version, author)
+  - Dependency lists
+  - Entry points
+  - Other setup-related settings.
 
-# Testing python application
-*types of testing*
-1. Automated testing 
-2. Manual testing
+---
 
-*Mode of testing*
-1. Unit testing
-2. Integration tests
+# Testing Python Applications
 
-*Testing frameworks*
+## Types of Testing
+1. Automated Testing
+2. Manual Testing
 
-1. pytest
-2. unittest
-3. robotframework
-4. selenium
-5. behave
-6. doctest
+## Modes of Testing
+1. Unit Testing (test individual functions/modules)
+2. Integration Testing (test how components work together)
 
-# check with the code style formatting and syntax(coding standard)
+## Common Testing Frameworks
+- pytest
+- unittest
+- robotframework
+- selenium
+- behave
+- doctest
 
-1. pylint
-2. flake8(it is best because it containt 3 library pylint pycodestyle mccabe)
-3. pycodestyle
+---
 
+# Code Style, Formatting, and Linting
 
+## Popular Tools
+1. pylint – Checks Python code for errors and enforces coding standards.
+2. flake8 – Combines multiple tools (pylint, pycodestyle, mccabe) in one.
+3. pycodestyle – Checks Python code against PEP 8 style guidelines.
+
+---
+
+# Summary
+- Use `requirements.txt` for production dependencies.
+- Use `requirements_dev.txt` for development/testing dependencies.
+- Use `tox.ini` for testing across different Python versions.
+- Use `pyproject.toml` or `setup.cfg` for project configuration.
+- Follow coding standards with tools like flake8 or pylint.
+- Test your application with frameworks like pytest or unittest.
