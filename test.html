@@ -1,0 +1,98 @@
+<h1>Development and Testing Dependencies</h1>
+<h2>requirements_dev.txt</h2>
+<ul>
+<li>This file lists dependencies needed for development and testing only.</li>
+<li>It keeps development/testing dependencies separate from production requirements.</li>
+<li>Example: Testing frameworks, linters, mock libraries.</li>
+</ul>
+<h2>requirements.txt</h2>
+<ul>
+<li>This file lists the dependencies required to run the project in production.</li>
+<li>Contains only the packages necessary for deployment.</li>
+</ul>
+<hr>
+<h1>Difference Between requirements_dev.txt and requirements.txt</h1>
+<ul>
+<li><strong>requirements.txt</strong> → For production environment dependencies.</li>
+<li><strong>requirements_dev.txt</strong> → For development &amp; testing environment dependencies.</li>
+</ul>
+<hr>
+<h1>tox.ini</h1>
+<ul>
+<li>Used for testing the Python package against different Python versions.</li>
+<li>Tox automates:
+<ol>
+<li>Creating virtual environments for different Python versions.</li>
+<li>Installing required dependencies.</li>
+<li>Running predefined test commands.</li>
+</ol>
+</li>
+<li>Think of it as a combination of <strong>virtualenvwrapper</strong> and <strong>makefile</strong>.</li>
+<li>Creates a <code>.tox</code> folder where environments are stored.</li>
+</ul>
+<hr>
+<h1>pyproject.toml</h1>
+<ul>
+<li>Used for configuring Python projects (alternative to setup.cfg).</li>
+<li>Contains metadata:
+<ul>
+<li>Build system info</li>
+<li>Package name, version, author, license</li>
+<li>Dependencies</li>
+</ul>
+</li>
+<li>Works with modern packaging tools (e.g., Poetry, Flit, setuptools).</li>
+</ul>
+<hr>
+<h1>setup.cfg</h1>
+<ul>
+<li>Used by <strong>setuptools</strong> for project packaging and installation.</li>
+<li>Stores configuration options such as:
+<ul>
+<li>Metadata (name, version, author)</li>
+<li>Dependency lists</li>
+<li>Entry points</li>
+<li>Other setup-related settings.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1>Testing Python Applications</h1>
+<h2>Types of Testing</h2>
+<ol>
+<li>Automated Testing</li>
+<li>Manual Testing</li>
+</ol>
+<h2>Modes of Testing</h2>
+<ol>
+<li>Unit Testing (test individual functions/modules)</li>
+<li>Integration Testing (test how components work together)</li>
+</ol>
+<h2>Common Testing Frameworks</h2>
+<ul>
+<li>pytest</li>
+<li>unittest</li>
+<li>robotframework</li>
+<li>selenium</li>
+<li>behave</li>
+<li>doctest</li>
+</ul>
+<hr>
+<h1>Code Style, Formatting, and Linting</h1>
+<h2>Popular Tools</h2>
+<ol>
+<li>pylint – Checks Python code for errors and enforces coding standards.</li>
+<li>flake8 – Combines multiple tools (pylint, pycodestyle, mccabe) in one.</li>
+<li>pycodestyle – Checks Python code against PEP 8 style guidelines.</li>
+</ol>
+<hr>
+<h1>Summary</h1>
+<ul>
+<li>Use <code>requirements.txt</code> for production dependencies.</li>
+<li>Use <code>requirements_dev.txt</code> for development/testing dependencies.</li>
+<li>Use <code>tox.ini</code> for testing across different Python versions.</li>
+<li>Use <code>pyproject.toml</code> or <code>setup.cfg</code> for project configuration.</li>
+<li>Follow coding standards with tools like flake8 or pylint.</li>
+<li>Test your application with frameworks like pytest or unittest.</li>
+</ul>
+

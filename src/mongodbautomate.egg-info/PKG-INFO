@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: mongodbautomate
 Version: 0.0.5
-Summary: A python package for connecting with database.
+Summary: A Python package for connecting with MongoDB.
 Home-page: https://github.com/AdMub/MLOPS-FOUNDATION
 Author: AdMub
 Author-email: admub465@gmail.com
@@ -29,6 +29,7 @@ Dynamic: description
 Dynamic: description-content-type
 Dynamic: home-page
 Dynamic: project-url
+Dynamic: requires-python
 Dynamic: summary
 
 # Development and Testing Dependencies

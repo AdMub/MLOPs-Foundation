@@ -1,12 +1,11 @@
 from setuptools import setup, find_packages
-from typing import List
 
 with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()     
+    long_description = f.read()
 
 __version__ = "0.0.5"
 REPO_NAME = "MLOPS-FOUNDATION"
-PKG_NAME= "mongodbautomate"
+PKG_NAME = "mongodbautomate"
 AUTHOR_USER_NAME = "AdMub"
 AUTHOR_EMAIL = "admub465@gmail.com"
 
@@ -15,7 +14,7 @@ setup(
     version=__version__,
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
-    description="A python package for connecting with database.",
+    description="A Python package for connecting with MongoDB.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
@@ -24,7 +23,5 @@ setup(
     },
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    )
-
-
-
+    python_requires=">=3.7",
+)

@@ -3,7 +3,7 @@ pyproject.toml
 setup.cfg
 setup.py
 src/mongodbautomate/__init__.py
-src/mongodbautomate/mongo_crud.py
+src/mongodbautomate/mongo_operand.py
 src/mongodbautomate.egg-info/PKG-INFO
 src/mongodbautomate.egg-info/SOURCES.txt
 src/mongodbautomate.egg-info/dependency_links.txt

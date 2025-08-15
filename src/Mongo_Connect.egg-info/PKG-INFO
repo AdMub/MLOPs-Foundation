@@ -1,15 +1,18 @@
 Metadata-Version: 2.1
-Name: Mongo-Connect
-Version: 0.0.4
+Name: mongodbautomate
+Version: 0.0.5
 Summary: A python package for connecting with database.
-Home-page: https://github.com/sunnysavita10/mongodbconnectorpkg
-Author: sunnysavita10
-Author-email: sunny.savita@ineuron.ai
+Home-page: https://github.com/AdMub/MLOPS-FOUNDATION
+Author: AdMub
+Author-email: admub465@gmail.com
 License: MIT
 Project-URL: Bug Tracker, https://github.com/sunnysavita10/mongodbconnectorpkg/issues
 Classifier: Programming Language :: Python :: 3.7
 Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
 Requires-Dist: ensure==1.0.2
