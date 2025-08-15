@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()
+    long_description = f.read()  # renamed variable for clarity
 
 __version__ = "0.0.5"
-REPO_NAME = "MLOPS-FOUNDATION"
-PKG_NAME = "mongodbautomate"
+REPO_NAME = "MLOPs-Foundation"
+PKG_NAME = "mongodb_automate"
 AUTHOR_USER_NAME = "AdMub"
 AUTHOR_EMAIL = "admub465@gmail.com"
 
@@ -15,9 +15,9 @@ setup(
     author=AUTHOR_USER_NAME,
     author_email=AUTHOR_EMAIL,
     description="A Python package for connecting with MongoDB.",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
+    long_description=long_description,  
+    long_description_content_type="text/markdown", 
+    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",  
     project_urls={
         "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
     },
