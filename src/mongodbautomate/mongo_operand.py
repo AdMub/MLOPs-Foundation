@@ -79,7 +79,7 @@ class MongoOperation:
     # -------------------
     # READ OPERATIONS
     # -------------------
-    def find_records(self, query: Optional[Dict] = None, projection: Optional[Dict] = None,
+    def find_record(self, query: Optional[Dict] = None, projection: Optional[Dict] = None,
                      limit: Optional[int] = None, collection_name: Optional[str] = None) -> List[Dict]:
         """Find records in the collection."""
         collection = self.create_collection(collection_name)
@@ -88,7 +88,7 @@ class MongoOperation:
             cursor = cursor.limit(limit)
         return list(cursor)
 
-    def aggregate_records(self, pipeline: List[Dict], collection_name: Optional[str] = None) -> List[Dict]:
+    def aggregate_record(self, pipeline: List[Dict], collection_name: Optional[str] = None) -> List[Dict]:
         """Perform aggregation on the collection."""
         collection = self.create_collection(collection_name)
         return list(collection.aggregate(pipeline))
@@ -96,30 +96,30 @@ class MongoOperation:
     # -------------------
     # UPDATE OPERATIONS
     # -------------------
-    def update_record(self, query: Dict, update_values: Dict, multiple: bool = False,
-                      collection_name: Optional[str] = None) -> None:
-        """Update single or multiple records in the collection."""
+    def update_record(self, query: Dict, update_values: Dict, many: bool = False,
+                       collection_name: Optional[str] = None) -> Dict:
         collection = self.create_collection(collection_name)
-        if multiple:
-            collection.update_many(query, {"$set": update_values})
+        if many:
+            result = collection.update_many(query, {"$set": update_values})
         else:
-            collection.update_one(query, {"$set": update_values})
+            result = collection.update_one(query, {"$set": update_values})
+        return {"matched_count": result.matched_count, "modified_count": result.modified_count}
 
     # -------------------
     # DELETE OPERATIONS
     # -------------------
-    def delete_record(self, query: Dict, multiple: bool = False, collection_name: Optional[str] = None) -> None:
-        """Delete single or multiple records from the collection."""
+    def delete_record(self, query: Dict, many: bool = False, collection_name: Optional[str] = None) -> Dict:
         collection = self.create_collection(collection_name)
-        if multiple:
-            collection.delete_many(query)
+        if many:
+            result = collection.delete_many(query)
         else:
-            collection.delete_one(query)
+            result = collection.delete_one(query)
+        return {"deleted_count": result.deleted_count}
 
     # -------------------
     # UTILITY FUNCTIONS
     # -------------------
-    def count_documents(self, query: Optional[Dict] = None, collection_name: Optional[str] = None) -> int:
+    def count_document(self, query: Optional[Dict] = None, collection_name: Optional[str] = None) -> int:
         """Count documents in the collection."""
         collection = self.create_collection(collection_name)
         return collection.count_documents(query or {})
