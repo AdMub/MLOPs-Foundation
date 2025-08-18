@@ -1,0 +1,49 @@
+# Linux/Unix command sequence for archiving and compressing files
+tar -cvf test.tar test
+gzip test.tar
+
+🔹 Step 1: tar -cvf test.tar test
+tar = tape archive (a tool to bundle files/folders into one archive file).
+Options:
+c → create a new archive.
+v → verbose (show what’s happening).
+f → file name to create.
+👉 This creates an archive called test.tar from the folder/file test.
+If test is a folder, it packs the whole folder inside test.tar.
+If test is a file, it just stores that file inside test.tar.
+💡 Analogy: Think of tar like putting all your clothes into a box (archive) called test.tar.
+
+🔹 Step 2: gzip test.tar
+gzip = compress the file to make it smaller.
+This takes test.tar and compresses it into test.tar.gz.
+💡 Analogy: After boxing your clothes (test.tar), you vacuum-seal the box to reduce space (test.tar.gz).
+
+
+# Building
+docker build -t newimage .
+docker run -i -t --name newcontainer newimage
+
+# Run in interacrive image
+🔹 Step 1: docker build -t newimage .
+What it does:
+This command takes your Dockerfile and everything in the current folder (.), then builds a Docker image.
+The -t newimage means: tag this image with the name newimage.
+Think of a Docker image as a blueprint (like a recipe for making jollof rice 🍚🔥).
+👉 After this step, you now have a blueprint (newimage) saved in your Docker system.
+
+🔹 Step 2: docker run -i -t --name newcontainer newimage
+What it does:
+This takes the image (blueprint) called newimage and starts a container from it.
+👉 A container is like cooking the recipe.
+The image (newimage) = recipe.
+The container (newcontainer) = the actual plate of food you can eat 😋.
+
+Breaking down the options:
+-i → interactive mode (keeps STDIN open so you can type inside).
+-t → allocates a terminal (so you get a shell like bash).
+--name newcontainer → gives your container a friendly name (newcontainer) so you don’t have to use the random long ID.
+newimage → the image you want to run.
+
+So, this command says:
+👉 “Start a container (call it newcontainer) from the newimage image, and give me a terminal so I can interact with it.”
+Once inside, you’re basically inside a mini-computer (Ubuntu) isolated from your host.
