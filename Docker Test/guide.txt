@@ -1,8 +1,0 @@
-docker build -t <imagename> .
-docker run -d -p 5000:5000 myhelloapp
-docker login
-username
-password
-
-docker tag myhelloapp   username/reponame or imagename (admub/projecthellodemo)
-docker push admub/projecthellodemo

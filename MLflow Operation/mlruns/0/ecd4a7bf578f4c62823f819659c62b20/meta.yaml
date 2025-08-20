@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/USER/Documents/MLOPs-Foundation/mlruns/0/ecd4a7bf578f4c62823f819659c62b20/artifacts
+end_time: 1755677067890
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ecd4a7bf578f4c62823f819659c62b20
+run_name: inquisitive-fowl-972
+run_uuid: ecd4a7bf578f4c62823f819659c62b20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755677067855
+status: 3
+tags: []
+user_id: USER
