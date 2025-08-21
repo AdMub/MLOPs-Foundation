@@ -1,0 +1,21 @@
+First initialize Git (DVC requires Git tracking by default), folder must git repo
+-- dvc init
+-- dvc add data/data.csv
+-- git add data/data.csv.dvc
+-- git checkout 630e873d7e002b1ffe262eddaaff3213d8bca8e5
+-- dvc checkout
+-- dvc remote add -d -f remote_storage C:/Users/USER/Documents/MLOPs-Foundation/remotestorage
+-- dvc push
+
+
+git cherry-pick 3c39f98
+
+Merge = bring the whole notebook (all pages/commits).
+Cherry-pick = tear out one page you like and paste it into your current notebook.
+
+
+
+
+-- dvc repro
+
+-- dvc dag (Direct Acyclic Graph)
