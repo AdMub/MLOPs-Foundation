@@ -1,0 +1,19 @@
+# 1) Stop tracking it as a submodule but keep files in your working tree
+git rm --cached -r "Git_Practice"
+
+# 2) Remove submodule config, if present
+if [ -f .gitmodules ]; then
+  git config -f .gitmodules --remove-section submodule.Git_Practice || true
+  git add .gitmodules
+fi
+
+# 3) Clean any submodule metadata
+rm -rf .git/modules/Git_Practice 2>/dev/null || true
+
+# 4) Make sure the inner repo is no longer a repo
+rm -rf "Git_Practice/.git"
+
+# 5) Now add and commit the actual files as part of the main repo
+git add "Git_Practice"
+git commit -m "Convert Git_Practice from submodule to normal folder"
+git push
