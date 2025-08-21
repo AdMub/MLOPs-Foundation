@@ -1,0 +1,144 @@
+281  conda activate -p env python 3.13.0 y
+  282  which conda
+  283  git init
+  284  ls
+  285  ls -a
+  286  gits ls
+  287  git ls
+  288  cd .git
+  289  ls
+  290  cd ..
+  291  ls -a
+  292  clear
+  293  git status
+  294  git config --global user.email "admub465@gmail.com
+kkk
+
+
+
+  295  git config --global user.email "admub465@gmail.com"
+  296  git config --global user.name "AdMub"
+  297  git branch
+  298  git branch
+  299  git status
+  300  git branch testingbranch
+  301  git init
+  302  git branch
+  303  git branch testingfirstbranch
+  304  git branch testingfirstbranch main
+  305  touch README.md
+  306  git commit -m "Initial commit"
+  307  git add .
+  308  git commit -m "Initial commit"
+  309  git branch
+  310  git branch testingfirstbranch main
+  311  touch testing.py
+  312  python testing.py
+  313  git add testing.py
+  314  git status
+  315  git commit -m "firsttestin"
+  316  git log
+  317  git branch testingfirstbranch
+  318  git branch
+  319  git checkout branch
+  320  git checkout testingfirstbranch
+  321  git branch
+  322  git status
+  323  git status
+  324  git branch
+  325  git checkout master
+  326  git status
+  327  git checkout testingfirstbranch
+  328  git add .
+  329  git commit -m "multiplication added"
+  330  git branch
+  331  git status
+  332  git checkout master
+  333  git status
+  334  history
+  335  touch testing2.py
+  336  git status
+  337  git branch
+  338  git add .
+  339  python testing2.py
+  340  python testing2.py
+  341  python testing2.py
+  342  python testing2.py
+  343  python testing2.py
+  344  python testing2.py
+  345  python testing2.py
+  346  python testing2.py
+  347  python testing2.py
+  348  python testing2.py
+  349  git status
+  350  git branch
+  351  git add .
+  352  git commit -m "testing2"
+  353  git branch testingfirstbranch
+  354  git branch
+  355  git checkout testingfirstbranch
+  356  python testing1.py
+  357  python testing1.py
+  358  git add .
+  359  git commit -m "question"
+  360  git checkout master
+  361  git merge testingfirstbranch
+  362  git merge --abort
+  363  git merge testingfirstbranch -m "Merge testingfirstbranch into master"
+  364  clear
+  365  git branch
+  366  git checkout testingfirstbranch
+  367  git checkout master
+  368  git add .
+  369  git commit -m "demo added"
+  370  git checkout testingfirstbranch
+  371  touch demo.txt
+  372  git add .
+  373  git commit -m "demo message added"
+  374  git checkout master
+  375  git status
+  376  git merge testingfirstbranch
+  377  git add .
+  378  git commit -m "Demo Successfully merged"
+  379  which git
+  380  git login
+  381  git log
+  382  git show "674965aec"
+  383  touch stashingdemo.txt
+  384  git add .
+  385  git commit -m "stashing updated"
+  386  git status
+  387  git branch
+  388  git stash
+  389  git stash list
+  390  git stash
+  391  git stash list
+  392  git stash
+  393  git stash list
+  394  git stash apply stash@{0}
+  395  git stash apply stash@{2}
+  396  git add .
+  397  git commit -m "Stash code is updated"
+  398  git stash list
+  399  git stash apply stash@{2}
+  400  git add.
+  401  git add .
+  402  git commit -m "stash code conflict resolved"
+  403  git stash apply stash@{1}
+  404  git add .
+  405  git commit -m "stash all  code conflict resolved"
+  406  touch reseting & reverting.txt
+  407  touch reseting.txt
+  408  git add .
+  409  git status
+  410  git reset reseting.txt
+  411  git status
+  412  git add reseting.txt
+  413  git status
+  414  git commit -m "reseting file added"
+  415  git log --oneline
+  416  git revert ffaa7d6 -m "not satisfy"
+  417  git revert ffaa7d6
+  418  history
+  419 $ git push --set-upstream https://github.com/AdMub/Git.practice master
+  420 git remote add origin git@github.com:AdMub/Git.practice.git
